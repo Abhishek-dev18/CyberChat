@@ -7,8 +7,6 @@ workflows:
         JAVA_VERSION: '11'
         PACKAGE_NAME: "com.cyberchat.app"
         APP_NAME: "CyberChat"
-      android:
-        image: latest   # ✅ Correct spelling here
       java: "11"
       node: "16"
 
