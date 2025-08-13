@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cyber Theme Colors - Dark Base with Neon Accents -->
+    <color name="cyber_black">#0F0F0F</color>
+    <color name="cyber_dark_gray">#1A1A1A</color>
+    <color name="cyber_gray">#2E2E2E</color>
+    <color name="cyber_light_gray">#404040</color>
+
+    <!-- Neon Accent Colors -->
+    <color name="cyber_green">#00FF41</color>
+    <color name="cyber_blue">#00FFFF</color>
+    <color name="cyber_purple">#8A2BE2</color>
+    <color name="cyber_red">#FF073A</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="text_hint">#808080</color>
+
+    <!-- Message Bubble Colors -->
+    <color name="message_sent">#00FF41</color>
+    <color name="message_received">#2E2E2E</color>
+    <color name="message_text_sent">#000000</color>
+    <color name="message_text_received">#FFFFFF</color>
+
+    <!-- Status Colors -->
+    <color name="status_online">#00FF41</color>
+    <color name="status_offline">#FF073A</color>
+    <color name="status_connecting">#00FFFF</color>
+</resources>

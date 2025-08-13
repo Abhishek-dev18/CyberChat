@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <!-- Sent Message (Right) -->
+    <LinearLayout
+        android:id="@+id/layout_message_sent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_message_sent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/message_bubble_right"
+            style="@style/MessageTextSent"
+            android:text="Hello there!" />
+
+        <TextView
+            android:id="@+id/tv_time_sent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:30"
+            style="@style/CyberText"
+            android:textSize="10sp"
+            android:textColor="@color/text_hint"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dp" />
+
+    </LinearLayout>
+
+    <!-- Received Message (Left) -->
+    <LinearLayout
+        android:id="@+id/layout_message_received"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_time_received"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:30"
+            style="@style/CyberText"
+            android:textSize="10sp"
+            android:textColor="@color/text_hint"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_message_received"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/message_bubble_left"
+            style="@style/MessageTextReceived"
+            android:text="Hi!" />
+
+    </LinearLayout>
+
+</LinearLayout>

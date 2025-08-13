@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CyberChat</string>
+
+    <!-- Main Activity -->
+    <string name="title_activity_main">CyberChat</string>
+    <string name="start_chat">START CHAT</string>
+    <string name="enable_bluetooth">ENABLE BLUETOOTH</string>
+    <string name="find_devices">FIND DEVICES</string>
+    <string name="bluetooth_status">Bluetooth Status</string>
+    <string name="status_offline">OFFLINE</string>
+    <string name="status_online">ONLINE</string>
+    <string name="status_connecting">CONNECTING</string>
+
+    <!-- Device List Activity -->
+    <string name="title_paired_devices">PAIRED DEVICES</string>
+    <string name="title_other_devices">AVAILABLE DEVICES</string>
+    <string name="button_scan">SCAN FOR DEVICES</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="scanning">Scanning for devices...</string>
+    <string name="select_device">Select a device to connect</string>
+
+    <!-- Chat Activity -->
+    <string name="title_connected_to">Connected to</string>
+    <string name="title_not_connected">Not connected</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving CyberChat.</string>
+    <string name="send">SEND</string>
+    <string name="type_message">Type a message...</string>
+    <string name="connection_lost">Device connection was lost</string>
+    <string name="unable_to_connect">Unable to connect device</string>
+    <string name="connection_failed">Connection failed</string>
+
+    <!-- Bluetooth Messages -->
+    <string name="bt_not_supported">Bluetooth is not available</string>
+    <string name="bt_disabled">Bluetooth is disabled</string>
+    <string name="bt_enabled">Bluetooth enabled</string>
+    <string name="enable_bt_request">This app needs Bluetooth to work. Enable Bluetooth?</string>
+
+    <!-- Permissions -->
+    <string name="permission_required">Permissions required</string>
+    <string name="location_permission_required">Location permission is required for Bluetooth scanning</string>
+
+    <!-- Menu -->
+    <string name="disconnect">Disconnect</string>
+    <string name="settings">Settings</string>
+</resources>

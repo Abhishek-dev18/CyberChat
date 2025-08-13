@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Cyber Theme -->
+    <style name="CyberTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/cyber_green</item>
+        <item name="colorPrimaryDark">@color/cyber_black</item>
+        <item name="colorAccent">@color/cyber_blue</item>
+        <item name="android:windowBackground">@color/cyber_black</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+    </style>
+
+    <!-- Cyber Button Style -->
+    <style name="CyberButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_cyber</item>
+        <item name="android:textColor">@color/cyber_black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:elevation">8dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- Cyber EditText Style -->
+    <style name="CyberEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:background">@drawable/cyber_background</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Cyber TextView Style -->
+    <style name="CyberText" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <!-- Large Cyber Title -->
+    <style name="CyberTitle" parent="CyberText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/cyber_green</item>
+        <item name="android:letterSpacing">0.2</item>
+    </style>
+
+    <!-- Status Text Style -->
+    <style name="StatusText" parent="CyberText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.15</item>
+    </style>
+
+    <!-- Message Text Styles -->
+    <style name="MessageText" parent="CyberText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="MessageTextSent" parent="MessageText">
+        <item name="android:textColor">@color/message_text_sent</item>
+    </style>
+
+    <style name="MessageTextReceived" parent="MessageText">
+        <item name="android:textColor">@color/message_text_received</item>
+    </style>
+</resources>

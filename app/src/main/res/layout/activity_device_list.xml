@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cyber_black"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="‹"
+            android:textSize="24sp"
+            android:textColor="@color/cyber_green"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/select_device"
+            style="@style/CyberTitle"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_scan"
+            style="@style/CyberButton"
+            android:layout_margin="0dp"
+            android:textSize="12sp"
+            android:minWidth="100dp" />
+
+    </LinearLayout>
+
+    <!-- Paired Devices Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_paired_devices"
+        style="@style/CyberText"
+        android:textColor="@color/cyber_green"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp" />
+
+    <ListView
+        android:id="@+id/lv_paired_devices"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/cyber_background"
+        android:divider="@color/cyber_gray"
+        android:dividerHeight="1dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Available Devices Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_other_devices"
+        style="@style/CyberText"
+        android:textColor="@color/cyber_blue"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp" />
+
+    <ListView
+        android:id="@+id/lv_new_devices"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/cyber_background"
+        android:divider="@color/cyber_gray"
+        android:dividerHeight="1dp" />
+
+    <!-- Scanning Status -->
+    <TextView
+        android:id="@+id/tv_scanning_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/none_found"
+        style="@style/CyberText"
+        android:textColor="@color/text_secondary"
+        android:textAlignment="center"
+        android:padding="16dp"
+        android:visibility="gone" />
+
+</LinearLayout>

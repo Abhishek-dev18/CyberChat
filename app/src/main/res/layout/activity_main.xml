@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cyber_black"
+    android:padding="20dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            style="@style/CyberTitle" />
+
+        <!-- Bluetooth Status Indicator -->
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_offline"
+            style="@style/StatusText"
+            android:textColor="@color/status_offline"
+            android:background="@drawable/cyber_background"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <!-- Connection Status Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/cyber_background"
+        android:padding="20dp"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bluetooth_status"
+            style="@style/CyberText"
+            android:textColor="@color/cyber_green"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/tv_bluetooth_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_disabled"
+            style="@style/CyberText"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- Action Buttons - Threads Style -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_enable_bluetooth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enable_bluetooth"
+            style="@style/CyberButton"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_find_devices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/find_devices"
+            style="@style/CyberButton"
+            android:layout_marginBottom="16dp"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/btn_start_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_chat"
+            style="@style/CyberButton"
+            android:enabled="false" />
+
+    </LinearLayout>
+
+    <!-- Footer Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="› SECURE P2P COMMUNICATION"
+            style="@style/CyberText"
+            android:textColor="@color/cyber_blue"
+            android:textSize="12sp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="› NO SERVERS • NO TRACKING"
+            style="@style/CyberText"
+            android:textColor="@color/cyber_green"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
