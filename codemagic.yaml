@@ -13,7 +13,7 @@ workflows:
     scripts:
       - name: Checkout code
         script: |
-          git clone https://github.com/yourusername/CyberChat.git .
+          git clone https://github.com/yourusername/CyberChat.git
           
       - name: Setup Java
         script: |
