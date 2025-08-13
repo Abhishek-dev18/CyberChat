@@ -7,13 +7,15 @@ workflows:
         # Optional: Specify SDK versions if needed
         ANDROID_SDK_VERSION: '32'  # Or your target SDK
         JAVA_VERSION: '11'
+        PACKAGE_NAME: "com.cyberchat.app"
       android:
-        image: android-sdk:33.0.0  # Use appropriate Codemagic Android image
-        gradle: '7.6'  # Or your project's gradle version
+        gradle: '7.6' # Or your project's gradle version
+      java: "11"
     scripts:
-      - name: Checkout code
+      - name: Setup local.properties  # ← CodeMagic already cloned the repo
         script: |
-          git clone https://github.com/yourusername/CyberChat.git
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
+
           
       - name: Setup Java
         script: |
