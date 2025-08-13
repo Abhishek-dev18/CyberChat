@@ -43,5 +43,8 @@ workflows:
     artifacts:
       - app/build/outputs/apk/release/app-release.apk
     environment:
-      # Optional override environment variables
-      # e.g., ANDROID_HOME or PATH adjustments if needed
+      vars:
+        PACKAGE_NAME: "com.cyberchat.app"
+        APP_NAME: "CyberChat"
+      java: "11"             # ← Only valid environment fields
+      node: "16"
