@@ -21,13 +21,19 @@ workflows:
           java -version
 
       - name: Restore dependencies
-        script: ./gradlew clean assembleDebug --no-daemon
+        script: |
+          cd android
+          ./gradlew clean assembleDebug --no-daemon
 
       - name: Run lint and tests
-        script: ./gradlew lint check --no-daemon
+        script: |
+          cd android
+          ./gradlew lint check --no-daemon
 
       - name: Build release APK
-        script: ./gradlew assembleRelease --no-daemon
+        script: |
+          cd android
+          ./gradlew assembleRelease --no-daemon
 
       - name: Collect artifacts
         script: |
