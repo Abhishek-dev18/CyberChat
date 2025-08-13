@@ -4,49 +4,36 @@ workflows:
     max_build_duration: 60
     environment:
       vars:
-        # Optional: Specify SDK versions if needed
-        ANDROID_SDK_VERSION: '32'  # Or your target SDK
         JAVA_VERSION: '11'
         PACKAGE_NAME: "com.cyberchat.app"
+        APP_NAME: "CyberChat"
       android:
-        gradle: '7.6' # Or your project's gradle version
+        image: latest   # Already has Android SDK & tools installed
       java: "11"
+      node: "16"
+
     scripts:
-      - name: Setup local.properties  # ← CodeMagic already cloned the repo
+      - name: Setup local.properties
         script: |
           echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
 
-          
       - name: Setup Java
         script: |
           export JAVA_HOME=/usr/local/openjdk-11
           java -version
-          
-      - name: Install Android SDK components
-        script: |
-          yes | sdkmanager "platforms;android-33" "build-tools;33.0.0"
-          
+
       - name: Restore dependencies
-        script: |
-          ./gradlew clean assembleDebug --no-daemon
-          
+        script: ./gradlew clean assembleDebug --no-daemon
+
       - name: Run lint and tests
-        script: |
-          ./gradlew lint check --no-daemon
-          
+        script: ./gradlew lint check --no-daemon
+
       - name: Build release APK
-        script: |
-          ./gradlew assembleRelease --no-daemon
-          
+        script: ./gradlew assembleRelease --no-daemon
+
       - name: Collect artifacts
         script: |
-          cp app/build/outputs/apk/release/app-release.apk $PCM_WORKSPACE/runs/$PCM_BUILD_ID/
-          
+          cp app/build/outputs/apk/release/app-release.apk $CM_BUILD_DIR/
+
     artifacts:
       - app/build/outputs/apk/release/app-release.apk
-    environment:
-      vars:
-        PACKAGE_NAME: "com.cyberchat.app"
-        APP_NAME: "CyberChat"
-      java: "11"             # ← Only valid environment fields
-      node: "16"
