@@ -8,7 +8,7 @@ workflows:
         PACKAGE_NAME: "com.cyberchat.app"
         APP_NAME: "CyberChat"
       android:
-        image: latest   # Already has Android SDK & tools installed
+        image: latest   # ✅ Correct spelling here
       java: "11"
       node: "16"
 
